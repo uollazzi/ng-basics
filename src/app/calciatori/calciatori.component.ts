@@ -11,5 +11,10 @@ export class CalciatoriComponent {
 
   calciatori: Calciatore[] = CALCIATORI;
 
+  calciatoreSelezionato?: Calciatore;
+  // calciatoreSelezionato: Calciatore | undefined;
 
+  seleziona(calciatore?: Calciatore) {
+    this.calciatoreSelezionato = calciatore;
+  }
 }

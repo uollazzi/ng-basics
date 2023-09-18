@@ -1,23 +1,46 @@
-<div class="box" *ngFor="let calciatore of calciatori">
+<ul>
+  <li *ngFor="let calciatore of calciatori" class="calciatore"
+    [ngClass]="{'selezionato': calciatoreSelezionato == calciatore, 'destro': calciatore.piede == 'destro', 'sinistro': calciatore.piede == 'sinistro'}">
+    {{calciatore.nome_completo}}
+    <button type="button" (click)="seleziona(calciatore)">Seleziona</button>
+  </li>
+</ul>
+<button type="button" (click)="seleziona(undefined)">Svuota</button>
+
+<div *ngIf="calciatoreSelezionato">
+  <h2>Nome: {{calciatoreSelezionato.nome_completo}}</h2>
+
+  <h3>Squadra: {{calciatoreSelezionato.squadra | uppercase}}</h3>
+
+  <img [src]="calciatoreSelezionato.foto">
+
+  <app-piede [piede]="calciatoreSelezionato.piede"></app-piede>
+
+</div>
+
+
+
+<!-- <div class="box" *ngFor="let calciatore of calciatori">
   <h2>Nome: {{calciatore.nome_completo}}</h2>
+
   <h3>Squadra: {{calciatore.squadra | uppercase}}</h3>
+
   <img [src]="calciatore.foto">
 
   <div>
     <input type="text" placeholder="piede" [(ngModel)]="calciatore.piede">
-    {{calciatore.piede}}
+    <h1>{{calciatore.piede}}</h1>
   </div>
 
   <div>
     <input type="text" [(ngModel)]="calciatore.squadra">
   </div>
 
-  <div *ngIf="calciatore.piede == 'destro' || calciatore.piede == 'ambidestro'" class="box destro"> D
-  </div>
+  <div *ngIf="calciatore.piede == 'destro' || calciatore.piede == 'ambidestro'" class="box piede destro">D</div>
 
-  <div *ngIf="calciatore.piede == 'sinistro' || calciatore.piede == 'ambidestro'" class="box sinistro">S</div>
+  <div *ngIf="calciatore.piede == 'sinistro' || calciatore.piede == 'ambidestro'" class="box piede sinistro">S</div>
 
-  <!-- <pre>
+  <pre>
     {{calciatore | json}}
-  </pre> -->
-</div>
+  </pre>
+</div> -->
