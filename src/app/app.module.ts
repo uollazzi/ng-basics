@@ -9,6 +9,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AccordionModule } from "ngx-bootstrap/accordion";
 import { PiedeComponent } from './piede/piede.component';
+import { CalciatorePreviewComponent } from './calciatore-preview/calciatore-preview.component';
+import { CalciatoreDetailComponent } from './calciatore-detail/calciatore-detail.component';
 
 
 @NgModule({
@@ -16,7 +18,9 @@ import { PiedeComponent } from './piede/piede.component';
     AppComponent,
     CalciatoriComponent,
     ProvaComponent,
-    PiedeComponent
+    PiedeComponent,
+    CalciatorePreviewComponent,
+    CalciatoreDetailComponent
   ],
   imports: [
     BrowserModule,

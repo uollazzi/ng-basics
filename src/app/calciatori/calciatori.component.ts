@@ -17,4 +17,14 @@ export class CalciatoriComponent {
   seleziona(calciatore?: Calciatore) {
     this.calciatoreSelezionato = calciatore;
   }
+
+
+
+  campanello() {
+    alert("ding");
+  }
+
+  infoBottone(e: MouseEvent) {
+    console.log(e);
+  }
 }

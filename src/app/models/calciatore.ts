@@ -16,3 +16,8 @@ export interface Calciatore {
   nascita: string;
   foto: string;
 }
+
+export interface Persona {
+  nome: string;
+  eta: number;
+}

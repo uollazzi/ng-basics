@@ -32,6 +32,10 @@ body {
   background-color: red;
 }
 
+.bg-dispari {
+  background-color: #999;
+}
+
 .panelCss {
   background-color: red;
 }
