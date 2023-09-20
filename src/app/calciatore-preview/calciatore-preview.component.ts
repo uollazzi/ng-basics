@@ -32,6 +32,7 @@ export class CalciatorePreviewComponent implements OnInit, OnDestroy {
     // setInterval(() => {
     //   this.onCalciatoreSelezionato.emit(this.calciatore);
     // }, this.delay);
+
   }
 
   seleziona() {
