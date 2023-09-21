@@ -7,10 +7,14 @@ import { CalciatoriComponent } from './calciatori/calciatori.component';
 import { ProvaComponent } from './prova/prova.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { AccordionModule } from "ngx-bootstrap/accordion";
+import { BsDatepickerModule } from "ngx-bootstrap/datepicker";
+
 import { PiedeComponent } from './piede/piede.component';
 import { CalciatorePreviewComponent } from './calciatore-preview/calciatore-preview.component';
 import { CalciatoreDetailComponent } from './calciatore-detail/calciatore-detail.component';
+import { TodoListComponent } from './todo-list/todo-list.component';
+import { TodoItemComponent } from './todo-item/todo-item.component';
+import { TodoAddComponent } from './todo-add/todo-add.component';
 
 
 @NgModule({
@@ -20,13 +24,16 @@ import { CalciatoreDetailComponent } from './calciatore-detail/calciatore-detail
     ProvaComponent,
     PiedeComponent,
     CalciatorePreviewComponent,
-    CalciatoreDetailComponent
+    CalciatoreDetailComponent,
+    TodoListComponent,
+    TodoItemComponent,
+    TodoAddComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     BrowserAnimationsModule,
-    AccordionModule
+    BsDatepickerModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
